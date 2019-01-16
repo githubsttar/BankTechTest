@@ -33,7 +33,7 @@ class PrintBalance
   end
 
   def date(tr)
-    tr.date.strftime("%d/%m/%Y").ljust(15)
+    tr.date.strftime("%d/%m/%Y").ljust(20)
   end
 
   def make_deposit(tr)
