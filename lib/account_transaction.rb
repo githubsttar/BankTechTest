@@ -1,26 +1,21 @@
 class AccountTransaction
+  attr_reader :amount, :date, :type
 
-  attr_reader :balance
-
-  def initialize(transaction_log = TransactionLog.new, balance = DEFAULT_BALANCE)
-    @balance = balance
-    @transaction_log = transaction_log
+  def initialize(amount, date = Time.new)
+    verify_amount(amount)
+    @date = date
+    transaction_type
   end
 
-  def deposit(amount)
-    @balance += amount
-    @transaction_log.create(amount, balance)
+private
+
+  def transaction_type
+    @amount > 0 ? @transaction_type = :deposit : @transaction_type = :withdrawl
   end
 
-  def withdrawl
-    @balance -= amount
-    @transaction_log.create(-amount, balance)
-  end
-
-  private
-
-  def current_balance
-    @balance
+  def verify_amount(amount)
+    raise_error "Money cannot be 0" if amount == 0
+    @amount = amount
   end
 
 end

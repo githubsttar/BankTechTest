@@ -7,17 +7,16 @@ describe AccountTransaction do
     Timecop.freeze(@time)
   end
 
-  subject(:deposit) {described_class.new(100, @time)}
-  subject(:withdrawl) {described_class.new(-100, @time)}
+  subject(:deposit) { described_class.new(100, @time) }
+  subject(:withdrawl) { described_class.new(-100, @time) }
 
   describe '#initialize' do
     it 'adds this amount' do
-      expect(deposit.amount).to eq(10)
+      expect(deposit.amount).to eq(100)
     end
 
     it 'removes this amount' do
-      expect(withdrawl.amount).to eq(-10)
+      expect(withdrawl.amount).to eq(-100)
     end
   end
-
 end
