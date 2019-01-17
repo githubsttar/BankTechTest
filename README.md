@@ -30,6 +30,7 @@ I created four clearly named classes which only do one specific thing. For examp
 
 ![](Screenshot_of_running_app.png)
 
+```
 Play on the irb:
 2.5.1 :001 > require './lib/account.rb'
  => true
@@ -53,7 +54,7 @@ Play on the irb:
 date       || credit   || debit    || balance
 17/01/2019 || 2000.00  ||          || 2000.00
 17/01/2019 ||          || 1000.00  || 1000.00
-
+```
 ------
 
 ```
