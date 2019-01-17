@@ -1,6 +1,5 @@
-require 'print_balance'
-require 'account_transaction'
 require 'balance_log'
+require 'account_transaction'
 
 describe BalanceLog do
   let(:account_transaction) { double :account_transaction }
