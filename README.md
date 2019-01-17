@@ -53,13 +53,14 @@ date       || credit   || debit    || balance
 17/01/2019 || 2000.00  ||          || 2000.00
 17/01/2019 ||          || 1000.00  || 1000.00
 ```
+
+## Screenshot of application
 ------
 ![](Screenshot_of_running_app.png)
 ------
 
+## To Use
 ```
-To Use
-
 * Clone Repo
 git clone https://github.com/githubsttar/BankTechTest.git
 cd BankTechTest
@@ -67,9 +68,8 @@ run bundle
 ```
 ------
 
+## Technologies used and version
 ```
-Technologies used and version
-
 ruby version 2.5.1
 rspec --init
 rubocop 0.39.0
