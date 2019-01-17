@@ -29,6 +29,7 @@ I created four clearly named classes which only do one specific thing. For examp
 
 ```
 Play on the irb:
+$ irb
 2.5.1 :001 > require './lib/account.rb'
  => true
 2.5.1 :002 > require './lib/print_balance.rb'
@@ -68,7 +69,7 @@ run bundle
 ## Technologies used and version
 ```
 ruby version 2.5.1
-rspec --init
+rspec
 rubocop 0.39.0
 
 ```
