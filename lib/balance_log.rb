@@ -1,7 +1,9 @@
+require 'account_transaction'
+
 class BalanceLog
 attr_reader :transactions
 
-  def initialize(transaction_class = Transaction)
+  def initialize(transaction_class = AccountTransaction)
     @transactions = {}
     @transaction_class = transaction_class
   end

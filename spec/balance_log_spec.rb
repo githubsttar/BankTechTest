@@ -3,13 +3,13 @@ require 'account_transaction'
 require 'balance_log'
 
 describe BalanceLog do
-  let(:account_balance) { double :account_transaction }
-  let(:transaction_class) { double(:transaction_class, new: transaction) }
+  let(:account_transaction) { double :account_transaction }
+  let(:transaction_class) { double(:transaction_class, new: account_transaction) }
   subject(:log) {described_class.new(transaction_class)}
 
   before do
-    allow(account_balance).to receive(:amount){10}
-    allow(account_balance).to receive(:balance){1000}
+    allow(account_transaction).to receive(:amount){10}
+    allow(account_transaction).to receive(:balance){1000}
   end
 
   describe '#history' do
@@ -31,7 +31,7 @@ describe BalanceLog do
     describe '#create' do
       it 'makes a transaction' do
         log.create(10, 1000)
-        expect(log.transactions).to include(transaction)
+        expect(log.transactions).to include(account_transaction)
       end
     end
 end
