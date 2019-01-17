@@ -66,6 +66,14 @@ cd BankTechTest
 run bundle
 ```
 
+## To run tests
+* separately enter each in the terminal
+```
+rspec
+rubocop
+
+```
+
 ## Technologies used and version
 ```
 ruby: version 2.5.1
