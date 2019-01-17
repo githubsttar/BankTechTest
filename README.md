@@ -7,9 +7,9 @@ Requirements
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
+## Acceptance criteria
+
 ```
-Acceptance criteria
-------
 Given a client makes a deposit of 1000 on 10-01-2012
 And a deposit of 2000 on 13-01-2012
 And a withdrawal of 500 on 14-01-2012
@@ -23,7 +23,7 @@ date       || credit  || debit  || balance
 
 ```
 
-Approach
+## Approach
 
 I employed the single responsibility principle in my design.
 I created four clearly named classes which only do one specific thing. For example the 'print_balance' class only prints the balance. I chose this design approach because I felt that if the application needed to scale, or be modified in someway, it would be easier to make those changes.
