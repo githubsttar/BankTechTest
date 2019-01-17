@@ -67,7 +67,7 @@ run bundle
 ```
 
 ## To run tests
-* separately enter each in the terminal
+* run each in the terminal (separately)
 ```
 rspec
 rubocop
