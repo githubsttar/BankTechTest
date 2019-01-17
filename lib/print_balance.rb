@@ -3,8 +3,8 @@ class PrintBalance
   def initialize
   end
 
-  def print_balance(display_transaction)
-    @display_transaction = display_transaction
+  def print_balance(balance_log)
+    @balance_log = balance_log
     puts title + print
   end
 
@@ -22,7 +22,7 @@ class PrintBalance
 
   def account_balance
     @transactions = []
-    @display_transaction.transactions.each do |tr, balance|
+    @balance_log.transactions.each do |tr, balance|
       @transactions << "#{date(tr)} || #{make_deposit(tr)} || #{make_withdrawal(tr)} || #{sprintf('%.2f', balance)}"
     end
   end

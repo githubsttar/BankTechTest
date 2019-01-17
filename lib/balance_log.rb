@@ -1,4 +1,4 @@
-require 'account_transaction'
+require_relative 'account_transaction'
 
 class BalanceLog
 attr_reader :transactions

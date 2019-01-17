@@ -1,5 +1,4 @@
 require 'print_balance'
-require 'pry'
 
 describe PrintBalance do
   before do

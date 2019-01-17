@@ -10,7 +10,7 @@ class AccountTransaction
 private
 
   def transaction_type
-    @amount > 0 ? @transaction_type = :deposit : @transaction_type = :withdrawl
+    @amount > 0 ? @type = :deposit : @type = :withdrawal
   end
 
   def verify_amount(amount)
