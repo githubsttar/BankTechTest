@@ -68,8 +68,8 @@ run bundle
 
 ## Technologies used and version
 ```
-ruby version 2.5.1
-rspec version 3.8.0
-rubocop 0.39.0
+ruby: version 2.5.1
+rspec: version 3.8.0
+rubocop: version 0.39.0
 
 ```
