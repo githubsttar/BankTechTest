@@ -22,7 +22,6 @@ date       || credit  || debit  || balance
 10/01/2012 || 1000.00 ||        || 1000.00
 
 ```
-
 ## Approach
 
 I employed the single responsibility principle in my design.
@@ -55,9 +54,8 @@ date       || credit   || debit    || balance
 ```
 
 ## Screenshot of application
-------
+
 ![](Screenshot_of_running_app.png)
-------
 
 ## To Use
 ```
@@ -66,7 +64,6 @@ git clone https://github.com/githubsttar/BankTechTest.git
 cd BankTechTest
 run bundle
 ```
-------
 
 ## Technologies used and version
 ```
