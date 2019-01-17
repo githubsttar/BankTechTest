@@ -1,7 +1,7 @@
 require_relative 'account_transaction'
-
+# the balance log class
 class BalanceLog
-attr_reader :transactions
+  attr_reader :transactions
 
   def initialize(transaction_class = AccountTransaction)
     @transactions = {}
@@ -17,5 +17,4 @@ attr_reader :transactions
   def store(transaction, balance)
     @transactions[transaction] = balance
   end
-
 end

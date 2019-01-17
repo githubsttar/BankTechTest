@@ -1,3 +1,4 @@
+# the account class
 class Account
   attr_reader :balance
 
@@ -21,5 +22,4 @@ class Account
   def current_statement
     @balance
   end
-
 end

@@ -1,5 +1,5 @@
+# The print balance class
 class PrintBalance
-
   def initialize
   end
 
@@ -11,11 +11,11 @@ class PrintBalance
   private
 
   def title
-    date = "date".ljust(10)
-    credit = "credit".ljust(8)
-    debit = "debit".ljust(8)
+    date = 'date'.ljust(10)
+    credit = 'credit'.ljust(8)
+    debit = 'debit'.ljust(8)
     balance = "balance\n"
-    column = " || "
+    column = ' || '
 
     date + column + credit + column + debit + column + balance
   end
@@ -23,7 +23,7 @@ class PrintBalance
   def account_balance
     @transactions = []
     @balance_log.transactions.each do |tr, balance|
-      @transactions << "#{date(tr)} || #{make_deposit(tr)} || #{make_withdrawal(tr)} || #{sprintf('%.2f', balance)}"
+      @transactions << "#{date(tr)} || #{make_deposit(tr)} || #{make_withdrawal(tr)} || #{format('%.2f', balance)}"
     end
   end
 
@@ -33,17 +33,16 @@ class PrintBalance
   end
 
   def date(tr)
-    tr.date.strftime("%d/%m/%Y").ljust(10)
+    tr.date.strftime('%d/%m/%Y').ljust(10)
   end
 
   def make_deposit(tr)
-    str = ""
-    tr.type == :deposit ? "#{sprintf('%.2f', tr.amount)} " : str.ljust(8)
+    str = ''
+    tr.type == :deposit ? "#{format('%.2f', tr.amount)} " : str.ljust(8)
   end
 
   def make_withdrawal(tr)
-    str = ""
-    tr.type == :withdrawal ? "#{sprintf('%.2f', -tr.amount)} " : str.ljust(8)
+    str = ''
+    tr.type == :withdrawal ? "#{format('%.2f', -tr.amount)} " : str.ljust(8)
   end
-
 end

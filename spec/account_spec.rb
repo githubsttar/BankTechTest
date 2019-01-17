@@ -18,7 +18,7 @@ describe Account do
   end
 
   describe '#money_out' do
-    before {new_account.money_in(2000)}
+    before { new_account.money_in(2000) }
 
     it 'subtracts money from the account' do
       new_account.money_out(1000)
@@ -29,7 +29,7 @@ describe Account do
   describe '#current_statement' do
     it 'prints out the current balance' do
       new_account.money_in(2000)
-      expect(new_account.current_statement).to eq(2000) 
+      expect(new_account.current_statement).to eq(2000)
     end
   end
 end
