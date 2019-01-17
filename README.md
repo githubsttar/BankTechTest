@@ -28,8 +28,6 @@ Approach
 I employed the single responsibility principle in my design.
 I created four clearly named classes which only do one specific thing. For example the 'print_balance' class only prints the balance. I chose this design approach because I felt that if the application needed to scale, or be modified in someway, it would be easier to make those changes.
 
-![](Screenshot_of_running_app.png)
-
 ```
 Play on the irb:
 2.5.1 :001 > require './lib/account.rb'
@@ -55,6 +53,8 @@ date       || credit   || debit    || balance
 17/01/2019 || 2000.00  ||          || 2000.00
 17/01/2019 ||          || 1000.00  || 1000.00
 ```
+------
+![](Screenshot_of_running_app.png)
 ------
 
 ```
